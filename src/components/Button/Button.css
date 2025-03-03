@@ -1,0 +1,23 @@
+.button {
+    border: none;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px auto;  /* Центрирование кнопки */
+
+}
+
+.servise-button{
+    margin: 50px 0 auto;  /* Центрирование кнопки */
+}
+#buttonText{
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .servise-button{
+        width: 200px;
+        height: 50px;
+
+    }
+}

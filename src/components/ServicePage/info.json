@@ -1,0 +1,16 @@
+{
+  "users": {
+    "ресницы": {
+      "id": 1,
+      "title": "ресницы",
+      "image": "src/assets/студия-1.jpg",
+      "description": "я крутой мастер"
+    },
+    "user2": {
+      "id": 1,
+      "title": "ресницы",
+      "image": "src/assets/студия-1.jpg",
+      "description": "я крутой мастер"
+    }
+  }
+}

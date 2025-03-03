@@ -1,0 +1,88 @@
+.service-description {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "text image";
+    margin: 50px 50px;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    border-radius: 50px;
+    max-width: 100%; /* добавь максимальную ширину */
+    box-sizing: border-box;
+}
+
+.service-description .text h2 {
+    font-size: 36px;
+    margin: 20px 40px;
+    color: black;
+}
+
+
+
+.service-description .text {
+    grid-area: text;
+    font-size: 20px;
+    line-height: 1.5;
+    color: black;
+    margin: 20px 40px; /* Отступы для текста */
+
+}
+.service-description .text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Центрирование по вертикали */
+    align-items: center;      /* Центрирование по горизонтали */
+    grid-area: text;
+}
+
+.service-description .image img {
+    grid-area: image;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.service-description:nth-child(2) {
+    direction: rtl;
+}
+
+
+
+@media (max-width: 768px) {
+    .service-description {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "image"
+            "text";
+
+        border-radius: 8px;
+        margin: 15px;
+    }
+
+    .service-description .text h2 {
+        font-size: 24px;
+        margin: 20px 40px;
+        color: black;
+    }
+
+    .service-description .text {
+        text-align: center;
+        font-size: 14px;
+        margin: 10px 20px; /* добавь отступы */
+    }
+
+    .service-description .image img {
+        grid-area: image;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+
+    }
+}
