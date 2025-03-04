@@ -4,7 +4,6 @@ import {useNavigate} from "react-router-dom";
 interface CardProps {
     image: string;
     title: string;
-    description: string;
 }
 
 export const Card: React.FC<CardProps> = ({ image, title }) => {

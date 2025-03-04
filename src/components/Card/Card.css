@@ -3,9 +3,10 @@
 /* Сетка для карточек */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px;
+    margin: 50px 50px;
+
 }
 
 .card {
@@ -21,10 +22,9 @@
     transform: scale(1.05);
 }
 
-
 .card-image img {
     width: 100%;
-    height: 240px;
+    height: 350px;
     object-fit: cover;
     display: block;
 }
@@ -32,23 +32,56 @@
 .card-button {
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px;
+    left: 20px; /* Фиксированный отступ слева */
     background-color: black;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 20px;
+    padding: 10px 15px; /* Добавил немного отступов внутри кнопки */
+    border-radius: 5px; /* Для красоты */
 }
 
+.card-grid .card:nth-child(3) img,
+.card-grid .card:nth-child(4) img/* Первая карточка */
+{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 480px; /* Увеличь, чтобы не обрезалось */
+    object-fit: cover;
+}
+
+.card-grid .card:nth-child(5) img{
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 100%;
+    height: 450px; /* Увеличь, чтобы не обрезалось */
+    object-fit: cover;
+}
+
+
 @media(max-width: 760px) {
+    .card-button {
+        position: absolute;
+        bottom: 10px;
+        left: 10px; /* Фиксированный отступ слева */
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+        padding: 10px 15px; /* Добавил немного отступов внутри кнопки */
+        border-radius: 5px; /* Для красоты */
+    }
+
+
     .card-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
-        padding: 20px;
+        margin: 50px 10px;
     }
 
     .card-image img {
@@ -56,5 +89,16 @@
         height: 200px;
     }
 
+    .card-grid .card:nth-child(3) img,
+    .card-grid .card:nth-child(4) img,
+    .card-grid .card:nth-child(5) img /* Первая карточка */
+    {
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+    .card-grid .card:nth-child(5) img{
+        top: 0;
+    }
 }
 

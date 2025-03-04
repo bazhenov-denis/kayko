@@ -8,6 +8,7 @@
     border-radius: 50px;
     max-width: 100%; /* добавь максимальную ширину */
     box-sizing: border-box;
+    height: 600px;
 }
 
 .service-description .text h2 {
@@ -39,11 +40,11 @@
     grid-area: image;
     width: 100%;
     max-width: 100%;
-    height: 100%;
+    height: 110%;
     object-fit: cover;
     display: block;
     margin: 0 auto;
-
+    margin-top: -20px;
 }
 
 .service-description:nth-child(2) {
@@ -52,7 +53,7 @@
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .service-description {
         grid-template-columns: 100%;
         grid-template-areas:

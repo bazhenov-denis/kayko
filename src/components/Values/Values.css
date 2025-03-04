@@ -1,6 +1,7 @@
 .values-section {
     text-align: center;
-    margin-top: 50px;
+    margin: 40px;
+
 }
 
 .values-section h2 {
@@ -11,7 +12,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 20px;
     justify-content: center;
 
 }
@@ -31,21 +31,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Затемнение с помощью полупрозрачного черного */
+    background: rgba(0, 0, 0, 0.6); /* Затемнение с помощью полупрозрачного черного */
     z-index: 1; /* Слой поверх изображения */
 }
 
 .value-image {
-    position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;  /* Сохраняет пропорции изображения */
+    object-fit: cover;  /* Покрывает контейнер, обрезая лишнюю часть изображения */
+    object-position: top;  /* Располагает изображение по верхнему краю */
 }
 
 .value-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 
 .value-text {
@@ -54,7 +54,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    text-align: center;
     padding: 10px;
     z-index: 2;
     border-radius: 8px;

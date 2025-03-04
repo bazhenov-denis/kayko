@@ -1,38 +1,49 @@
 import { useParams } from "react-router-dom";
-
+import "./ServisePage.css";
 import info from "./info.json";
+import { DataProcessing } from "./DataProcessing.tsx";
 
-/*const serviceData = {
-    ресницы: { title: "Ресницы", description: "Описание услуги по ресницам" },
-    макияж: { title: "Макияж", description: "Описание услуги по макияжу" },
-    карточка3: { title: "Карточка 3", description: "Описание 3", },
-    карточка4: { title: "Карточка 4", description: "Описание 4" },
-    карточка5: { title: "Карточка 5", description: "Описание 5" },
-    карточка6: { title: "Карточка 6", description: "Описание 6" },
-    карточка7: { title: "Карточка 7", description: "Описание 7" },
-    карточка8: { title: "Карточка 8", description: "Описание 8" },
-};*/
 
 export const ServicePage = () => {
     const { serviceId } = useParams();
-    const service = info.users[serviceId as keyof typeof info.users];
-    console.log(info.users);
+    const service = serviceId ? info.users[serviceId as keyof typeof info.users] : null;
 
     if (!service) {
         return (
-            <div>
+            <div className="info">
                 <h1>Услуга не найдена</h1>
             </div>
         );
     }
 
+    // Безопасно вызываем DataProcessing, если serviceId существует
+    const data = (serviceId ? DataProcessing(serviceId) : []) || [];
+
     return (
-        <div>
-            <main style={{ padding: "20px", textAlign: "center" }}>
-                <h1>{service.title}</h1>
-                <p>{service.description}</p>
-                <img src={"../src/assets/студия-1.jpg"} alt={service.title}/>
-            </main>
+        <div className="info">
+            <div className="container">
+                <div className="servise-image">
+                    <img src={service.image} alt={service.title} />
+                    <h1 className="title">{service.title}</h1>
+                </div>
+                <p className="description">{service.description}</p>
+                <div className="service-list">
+                    {data.length > 0 ? (
+                        data.map((yclients) => (
+                            <div key={yclients.id} className="service-item">
+                                <h3>{yclients.title}</h3>
+                                <p>{yclients.price_max}</p>
+                            </div>
+                        ))
+                    ) : (
+                        <p></p>
+                    )}
+                </div>
+                <h2>Особенности</h2>
+                <p className="description">
+                    {service.features}
+                </p>
+            </div>
         </div>
     );
 };

@@ -5,15 +5,16 @@ export const Location = () => {
 
     return (
         <div className="location">
-            <div className="info">
-                <h2>
-                    Большой Харитоньевский пер. 9
-                </h2>
-                <p>+7 (499) 388-92-31</p>
-                <p>Часы работы пн.-вс.: 9:00-22:00</p>
+            <div className="location-info">
+                <h3>
+                    ЖК «Символ» <br/>
+                    Москва, ул. Золоторожский вал, 11 строение 22
+                </h3>
+                <p>+7 916 524 8880</p>
+                <p>Часы работы: 10:00-22:00</p>
             </div>
-            <div className="image">
-                <img src={"../src/assets/студия-1.jpg"}/>
+            <div className="location-image">
+                <img src={"../src/assets/студия-2.jpg"}/>
             </div>
         </div>
     );

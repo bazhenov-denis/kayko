@@ -1,0 +1,135 @@
+/* Контейнер для центрирования контента */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 66%; /* Максимальная ширина контейнера */
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+}
+
+/* Стиль для блока с изображением */
+.servise-image {
+    position: relative;
+    width: 100%; /* Занимает всю ширину контейнера */
+    aspect-ratio: 3 / 1; /* Соотношение сторон (можно подстроить) */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+image::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.servise-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.servise-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Затемнение (чем больше alpha, тем темнее) */
+    border-radius: 20px;
+}
+/* Заголовок поверх картинки */
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Описание услуги */
+.description {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+
+}
+
+/* Общий фон страницы */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff; /* Цвет фона */
+    min-height: 100vh; /* Чтобы страница занимала всю высоту */
+    padding: 40px 0;
+}
+
+
+/* Контейнер для списка услуг */
+.service-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Блок услуги */
+.service-item {
+    background-color: #f6f6f6; /* Серый фон */
+    color: black;
+    width: 100%;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Название услуги */
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-right: 20%;
+}
+
+/* Цена услуги */
+.service-item p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media (max-width: 760px) {
+    .container{
+        max-width: 95%; /* Максимальная ширина контейнера */
+    }
+
+    .service-item h3 {
+        font-size: 1rem;
+    }
+
+    /* Цена услуги */
+    .service-item p {
+        font-size: 1rem;
+    }
+
+    .servise-image {
+        margin: 0;
+        width: 100%; /* Занимает всю ширину контейнера */
+        aspect-ratio: 3 / 2; /* Соотношение сторон (можно подстроить) */
+
+    }
+}
