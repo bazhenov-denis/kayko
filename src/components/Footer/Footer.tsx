@@ -6,9 +6,9 @@ export const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <div className="footer-socials">
-                <a href="#" className="social-icon"><FaTelegram /></a>
-                <a href="#" className="social-icon"><FaInstagram /></a>
-                <a href="#" className="social-icon"><FaVk /></a>
+                <a href="https://t.me/studio_kayko" className="social-icon"><FaTelegram /></a>
+                <a href="https://www.instagram.com/kayko.beauty?igsh=MTNid2tvYWthdTloeg%3D%3D&utm_source=qr" className="social-icon"><FaInstagram /></a>
+                <a href="https://vk.com/kaykomoscow" className="social-icon"><FaVk /></a>
 
             </div>
             <div className="footer-text">

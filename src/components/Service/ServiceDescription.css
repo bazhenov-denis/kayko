@@ -62,6 +62,7 @@
 
         border-radius: 8px;
         margin: 15px;
+        height: auto;
     }
 
     .service-description .text h2 {

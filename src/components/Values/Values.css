@@ -54,7 +54,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    padding: 10px;
     z-index: 2;
     border-radius: 8px;
 }
@@ -72,6 +71,10 @@
 @media(max-width: 760px) {
     .values-container {
         grid-template-columns: repeat(1, 1fr);
+        .value-image {
+            width: 100%;
+            height: 100%;  /* Сохраняет пропорции изображения */
 
+        }
     }
 }

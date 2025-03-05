@@ -6,7 +6,7 @@ import {Button} from "../Button/Button.tsx";
 export const ServiceDescription = () => {
     const info = [
         { image: '../src/assets/images/ServiceDescription/главная-1.jpg', title: 'KAYKO — это больше, чем просто    салон красоты.', description: 'Это место, где каждая женщина может восстановить связь с собой, повысить свою самооценку и научиться ценить свою уникальность' },
-        { image: '../src/assets/images/ServiceDescription/главная-2.jpg', title: 'Миссия KAYKO', description: 'сделать так, чтобы каждая женщина поняла: любовь к себе — это первый шаг к истинной красоте . Создать  гармонию внутреннего и внешнего , умение сочетать в себе красоту и ум, нежность и силу' },
+        { image: '../src/assets/images/ServiceDescription/главная-2.jpg', title: 'Миссия KAYKO', description: 'сделать так, чтобы каждая женщина вспомнила: любовь к себе — это первый шаг к истинной красоте. Создать  гармонию внутреннего и внешнего, умение сочетать в себе красоту и ум, нежность и силу' },
     ];
     return (
         <div className="service-grid">

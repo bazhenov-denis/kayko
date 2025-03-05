@@ -5,15 +5,20 @@
     text-align: center;
     text-decoration: none;
     margin: 10px auto;  /* Центрирование кнопки */
+    color: black;
+    background-color: black;
+
 
 }
 
 .servise-button{
     margin: 50px 0 auto;  /* Центрирование кнопки */
 }
+
 #buttonText{
     color: #ffffff;
 }
+
 @media (max-width: 768px) {
     .servise-button{
         width: 200px;

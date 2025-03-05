@@ -18,8 +18,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../src/assets/fonts/Century Gothic/centurygothic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "Roboto Light", sans-serif;
+  font-family:"Century Gothic", "Roboto Light", sans-serif;
 }
 
 

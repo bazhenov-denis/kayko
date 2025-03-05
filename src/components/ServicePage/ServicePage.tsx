@@ -2,10 +2,12 @@ import { useParams } from "react-router-dom";
 import "./ServisePage.css";
 import info from "./info.json";
 import { DataProcessing } from "./DataProcessing.tsx";
+import {Button} from "../Button/Button.tsx";
 
 
 export const ServicePage = () => {
-    const { serviceId } = useParams();
+    const { serviceId } = useParams()
+    console.log(serviceId)
     const service = serviceId ? info.users[serviceId as keyof typeof info.users] : null;
 
     if (!service) {
@@ -16,6 +18,15 @@ export const ServicePage = () => {
         );
     }
 
+    const renderTextWithLineBreaks = (text: string) => {
+        return text.split("\n").map((item, index) => (
+            <span key={index}>
+                {item}
+                <br/> <br/>
+            </span>
+        ));
+    };
+
     // Безопасно вызываем DataProcessing, если serviceId существует
     const data = (serviceId ? DataProcessing(serviceId) : []) || [];
 
@@ -23,10 +34,11 @@ export const ServicePage = () => {
         <div className="info">
             <div className="container">
                 <div className="servise-image">
-                    <img src={service.image} alt={service.title} />
+                    <img src={service.image} alt={service.title}/>
                     <h1 className="title">{service.title}</h1>
                 </div>
                 <p className="description">{service.description}</p>
+                <Button></Button>
                 <div className="service-list">
                     {data.length > 0 ? (
                         data.map((yclients) => (
@@ -41,7 +53,7 @@ export const ServicePage = () => {
                 </div>
                 <h2>Особенности</h2>
                 <p className="description">
-                    {service.features}
+                    {renderTextWithLineBreaks(service.features)}
                 </p>
             </div>
         </div>
